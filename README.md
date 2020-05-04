@@ -51,7 +51,13 @@ UECS DBへアクセスするためのWeb API
 | serialid | Serial ID レコードを特定する際に有効            |
 
     【出力例】
-     [{"tod":"2020-05-01 00:00:00+09","ccmtype":"cnd.aXX","room":1,"region":2,"ord":1,"priority":1,"value":"0.000000000000000000","ip":"192.168.0.178","serialid":147820624},{"tod":"2020-05-01 00:00:00+09","ccmtype":"cnd.aXX","room":1,"region":11,"ord":1,"priority":1,"value":"0.000000000000000000","ip":"192.168.0.162","serialid":147820625},{"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirTemp.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"14.900000000000000000","ip":"192.168.0.191","serialid":147820626},{"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirHumid.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"99.400000000000000000","ip":"192.168.0.191","serialid":147820627},{"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirHumidDef.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"0.070000000000000000","ip":"192.168.0.191","serialid":147820628},
+     [
+       {"tod":"2020-05-01 00:00:00+09","ccmtype":"cnd.aXX","room":1,"region":2,"ord":1,"priority":1,"value":"0.000000000000000000","ip":"192.168.0.178","serialid":147820624},
+       {"tod":"2020-05-01 00:00:00+09","ccmtype":"cnd.aXX","room":1,"region":11,"ord":1,"priority":1,"value":"0.000000000000000000","ip":"192.168.0.162","serialid":147820625},
+       {"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirTemp.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"14.900000000000000000","ip":"192.168.0.191","serialid":147820626},
+       {"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirHumid.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"99.400000000000000000","ip":"192.168.0.191","serialid":147820627},
+       {"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirHumidDef.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"0.070000000000000000","ip":"192.168.0.191","serialid":147820628}
+     ]
 
 
 ### getdatabyccm 
