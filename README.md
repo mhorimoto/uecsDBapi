@@ -10,9 +10,9 @@ UECS DBへアクセスするためのWeb API
 
 ## 機能一覧
 
-|     名称         |             機能概要               | 状況 |
-|:----------------:|:-----------------------------------|:----:|
-| getdata.php      | 日付をキーにデータを取得する       |  未  |
+|     名称         |             機能概要               | 状況   |
+|:----------------:|:-----------------------------------|:------:|
+| getdata.php      | 日付をキーにデータを取得する       |  1.00  |
 | getdatabyccm.php | CCMtypeをキーにデータを取得する    |  未  |
 | getdatabyip.php  | IPアドレスをキーにデータを取得する |  未  |
 | listip.php       | IPアドレスの一覧を取得する         |  1.00  |
@@ -34,7 +34,24 @@ UECS DBへアクセスするためのWeb API
 | s="YYYY-MM-DD HH:MM:SS" | 開始年月日 時刻                                                              |
 | e="YYYY-MM-DD HH:MM:SS" | 終了年月日 時刻                                                              |
 | l=1000                  | 出力上限数 1日分だと120万レコードくらいになるので既定値では1,000レコードまで |
-| r=1                     | 開始と終了の日時関係が、s > e のときには r=1 をつける                        |
+| r=1                     | SORTINGを逆順にしたいときにr=1をつける                                       |
+
+ 出力は、JSON形式になる。
+
+| **Tag**  |        **意味**                                 |
+|:--------:|:------------------------------------------------|
+| tod      | 日時                                            |
+| ccmtype  | CCM type                                        |
+| room     | ROOM                                            |
+| region   | REGION                                          |
+| ord      | ORDER                                           |
+| priority | PRIORITY                                        |
+| value    | データ・小数点下18桁くらいの固定小数点          |
+| ip       | IPアドレス                                      |
+| serialid | Serial ID レコードを特定する際に有効            |
+
+    【出力例】
+     [{"tod":"2020-05-01 00:00:00+09","ccmtype":"cnd.aXX","room":1,"region":2,"ord":1,"priority":1,"value":"0.000000000000000000","ip":"192.168.0.178","serialid":147820624},{"tod":"2020-05-01 00:00:00+09","ccmtype":"cnd.aXX","room":1,"region":11,"ord":1,"priority":1,"value":"0.000000000000000000","ip":"192.168.0.162","serialid":147820625},{"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirTemp.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"14.900000000000000000","ip":"192.168.0.191","serialid":147820626},{"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirHumid.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"99.400000000000000000","ip":"192.168.0.191","serialid":147820627},{"tod":"2020-05-01 00:00:00+09","ccmtype":"InAirHumidDef.mIC","room":1,"region":3,"ord":1,"priority":29,"value":"0.070000000000000000","ip":"192.168.0.191","serialid":147820628},
 
 
 ### getdatabyccm 
